@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using CursoOnlineDDD.Dominio.Test._Util;
 using ExpectedObjects;
 using Xunit;
 
@@ -50,11 +51,8 @@ namespace CursoOnlineDDD.Dominio.Test.Cursos
             };
 
             //Assert
-            var message = Assert.Throws<ArgumentException>(() =>
-                 new Curso(nomeInvalido, cursoEsperado.CargaHoraria, cursoEsperado.PublicoAlvo, cursoEsperado.Valor))
-                 .Message;
-            Assert.Equal("Nome inválido", message);
-
+            Assert.Throws<ArgumentException>(() =>
+                 new Curso(nomeInvalido, cursoEsperado.CargaHoraria, cursoEsperado.PublicoAlvo, cursoEsperado.Valor)).ComMensagem("Nome inválido");
         }
 
         //Os dois testes abaixos, estão sendo substituídos pelo de cima com a notação [Theory].
@@ -110,12 +108,8 @@ namespace CursoOnlineDDD.Dominio.Test.Cursos
             };
 
             //Assert
-            var message = Assert.Throws<ArgumentException>(() =>
-                    new Curso(cursoEsperado.Nome, cargaHorariaInvalida, cursoEsperado.PublicoAlvo, cursoEsperado.Valor))
-                .Message;
-
-            Assert.Equal(message, "Carga horária inválida");
-
+            Assert.Throws<ArgumentException>(() =>
+                    new Curso(cursoEsperado.Nome, cargaHorariaInvalida, cursoEsperado.PublicoAlvo, cursoEsperado.Valor)).ComMensagem("Carga horária inválida");
         }
 
         [Theory]
@@ -134,12 +128,8 @@ namespace CursoOnlineDDD.Dominio.Test.Cursos
             };
 
             //Assert
-            var message = Assert.Throws<ArgumentException>(() =>
-                new Curso(cursoEsperado.Nome, cursoEsperado.CargaHoraria, cursoEsperado.PublicoAlvo, valorInvalido))
-                .Message;
-
-            Assert.Equal(message, "Valor inválido");
-
+             Assert.Throws<ArgumentException>(() =>
+                new Curso(cursoEsperado.Nome, cursoEsperado.CargaHoraria, cursoEsperado.PublicoAlvo, valorInvalido)).ComMensagem("Valor inválido");
         }
     }
 
