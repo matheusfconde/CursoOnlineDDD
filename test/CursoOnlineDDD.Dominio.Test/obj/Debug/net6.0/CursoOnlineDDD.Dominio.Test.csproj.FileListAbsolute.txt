@@ -97,3 +97,4 @@ C:\_estudos\CursoOnlineTDD\test\CursoOnlineDDD.Dominio.Test\obj\Debug\net6.0\Cur
 C:\_estudos\CursoOnlineTDD\test\CursoOnlineDDD.Dominio.Test\obj\Debug\net6.0\ref\CursoOnlineDDD.Dominio.Test.dll
 C:\_estudos\CursoOnlineTDD\test\CursoOnlineDDD.Dominio.Test\obj\Debug\net6.0\CursoOnlineDDD.Dominio.Test.pdb
 C:\_estudos\CursoOnlineTDD\test\CursoOnlineDDD.Dominio.Test\obj\Debug\net6.0\CursoOnlineDDD.Dominio.Test.genruntimeconfig.cache
+C:\_estudos\CursoOnlineTDD\test\CursoOnlineDDD.Dominio.Test\bin\Debug\net6.0\ExpectedObjects.dll
