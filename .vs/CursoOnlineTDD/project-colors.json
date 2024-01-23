@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "f103b401-101d-4fd9-9e53-37d864be1975": {
+      "ProjectGuid": "f103b401-101d-4fd9-9e53-37d864be1975",
+      "DisplayName": "CursoOnlineDDD.Dominio.Test",
+      "ColorIndex": 0
+    },
+    "53279ce9-dd01-4e2c-b69c-3ee942aecac4": {
+      "ProjectGuid": "53279ce9-dd01-4e2c-b69c-3ee942aecac4",
+      "DisplayName": "CursoOnlineTDD.Dominio",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
