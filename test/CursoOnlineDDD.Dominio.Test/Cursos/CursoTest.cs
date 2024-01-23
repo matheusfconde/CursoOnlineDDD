@@ -7,15 +7,12 @@ namespace CursoOnlineDDD.Dominio.Test.Cursos
     public class CursoTest
     {
         /*
-         * Eu, enquanto administrador, quero criar e editar cursos para
-         * que sejam abertas matrículas para o mesmo.
-         * Critérios de aceite
-         * - Criar um curso com nome, carga horária, público alvo e 
-         * valor do curso
-         * - As opções para público alvo são: Estudante, Universitário,
-         * Empregado e Empregador
-         * - Todos os campos de curso são obrigatórios
-         */
+         * Eu, enquanto administrador, quero criar e editar cursos para que sejam abertas matrículas para o mesmo.
+         * Critérios de aceite:
+         * - Criar um curso com nome, carga horária, público alvo e valor do curso;
+         * - As opções para público alvo são: Estudante, Universitário, Empregado e Empregador;
+         * - Todos os campos de curso são obrigatórios.
+        */
 
         [Fact]
         public void DeveCriarCurso()
@@ -24,10 +21,9 @@ namespace CursoOnlineDDD.Dominio.Test.Cursos
             {
                 Nome = "Informática básica",
                 CargaHoraria = (double)80,
-                PublicoAlvo = "Estudantes",
+                PublicoAlvo = PublicoAlvo.Estudante,
                 Valor = (double)950
             };
-
 
             //Action
             var curso = new Curso(cursoEsperado.Nome, cursoEsperado.CargaHoraria, cursoEsperado.PublicoAlvo, cursoEsperado.Valor);
@@ -38,11 +34,17 @@ namespace CursoOnlineDDD.Dominio.Test.Cursos
         }
     }
 
+    public enum PublicoAlvo
+    {
+        Estudante,
+        Universitario,
+        Empregado,
+        Empreendedor
+    }
+
     public class Curso
     {
-
-
-        public Curso(string nome, double cargaHoraria, string publicoAlvo, double valor)
+        public Curso(string nome, double cargaHoraria, PublicoAlvo publicoAlvo, double valor)
         {
             Nome = nome;
             CargaHoraria = cargaHoraria;
@@ -52,7 +54,7 @@ namespace CursoOnlineDDD.Dominio.Test.Cursos
 
         public string Nome { get; set; }
         public double CargaHoraria { get; private set; }
-        public string PublicoAlvo { get; private set; }
+        public PublicoAlvo PublicoAlvo { get; private set; }
         public double Valor { get; private set; }
     }
 }
