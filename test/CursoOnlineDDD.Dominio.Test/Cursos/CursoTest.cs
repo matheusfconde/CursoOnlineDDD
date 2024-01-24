@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using CursoOnlineDDD.Dominio.Test._Util;
 using ExpectedObjects;
 using Xunit;
