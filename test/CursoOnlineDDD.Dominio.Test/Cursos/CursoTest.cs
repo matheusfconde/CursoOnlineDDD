@@ -1,4 +1,5 @@
 ﻿using System;
+using CursoOnlineDDD.Dominio.Test._Builders;
 using CursoOnlineDDD.Dominio.Test._Util;
 using ExpectedObjects;
 using Xunit;
@@ -6,7 +7,7 @@ using Xunit.Abstractions;
 
 namespace CursoOnlineDDD.Dominio.Test.Cursos
 {
-    public class CursoTest :IDisposable
+    public class CursoTest : IDisposable
     {
         /*
          * Eu, enquanto administrador, quero criar e editar cursos para que sejam abertas matrículas para o mesmo.
@@ -14,6 +15,7 @@ namespace CursoOnlineDDD.Dominio.Test.Cursos
          * - Criar um curso com nome, carga horária, público alvo e valor do curso;
          * - As opções para público alvo são: Estudante, Universitário, Empregado e Empregador;
          * - Todos os campos de curso são obrigatórios.
+         * - Curso deve ter uma descrição (não obrigatório)
         */
 
         private readonly ITestOutputHelper _output;
@@ -21,17 +23,19 @@ namespace CursoOnlineDDD.Dominio.Test.Cursos
         private readonly double _cargaHoraria;
         private readonly PublicoAlvo _publicoAlvo;
         private readonly double _valor;
+        private readonly string _descricao;
 
         public CursoTest(ITestOutputHelper output)
         {
-                //A cada método de teste, o construtor é executado.
-                _output = output;
-                _output.WriteLine("Construtor sendo executado.");
+            //A cada método de teste, o construtor é executado.
+            _output = output;
+            _output.WriteLine("Construtor sendo executado.");
 
-                _nome = "Informática básica";
-                _cargaHoraria = 80;
-                _publicoAlvo = PublicoAlvo.Estudante;
-                _valor = 950;
+            _nome = "Informática básica";
+            _cargaHoraria = 80;
+            _publicoAlvo = PublicoAlvo.Estudante;
+            _valor = 950;
+            _descricao = "Uma descrição";
         }
 
         public void Dispose()
@@ -48,11 +52,12 @@ namespace CursoOnlineDDD.Dominio.Test.Cursos
                 Nome = _nome,
                 CargaHoraria = _cargaHoraria,
                 PublicoAlvo = _publicoAlvo,
-                Valor = _valor
+                Valor = _valor,
+                Descricao = _descricao
             };
 
             //Action
-            var curso = new Curso(cursoEsperado.Nome, cursoEsperado.CargaHoraria, cursoEsperado.PublicoAlvo, cursoEsperado.Valor);
+            var curso = new Curso(cursoEsperado.Nome, cursoEsperado.Descricao, cursoEsperado.CargaHoraria, cursoEsperado.PublicoAlvo, cursoEsperado.Valor);
 
             //Assert
             cursoEsperado.ToExpectedObject().ShouldMatch(curso);
@@ -66,7 +71,8 @@ namespace CursoOnlineDDD.Dominio.Test.Cursos
         {
             //Assert
             Assert.Throws<ArgumentException>(() =>
-                 new Curso(nomeInvalido, _cargaHoraria, _publicoAlvo, _valor)).ComMensagem("Nome inválido");
+                CursoBuilder.Novo().ComNome(nomeInvalido).Build())
+                .ComMensagem("Nome inválido");
         }
 
         //Os dois testes abaixos, estão sendo substituídos pelo de cima com a notação [Theory].
@@ -114,7 +120,8 @@ namespace CursoOnlineDDD.Dominio.Test.Cursos
         {
             //Assert
             Assert.Throws<ArgumentException>(() =>
-                    new Curso(_nome, cargaHorariaInvalida, _publicoAlvo, _valor)).ComMensagem("Carga horária inválida");
+                CursoBuilder.Novo().ComCargaHoraria(cargaHorariaInvalida).Build())
+                 .ComMensagem("Carga horária inválida");
         }
 
         [Theory]
@@ -125,7 +132,8 @@ namespace CursoOnlineDDD.Dominio.Test.Cursos
         {
             //Assert
             Assert.Throws<ArgumentException>(() =>
-                new Curso(_nome, _cargaHoraria, _publicoAlvo, valorInvalido)).ComMensagem("Valor inválido");
+                CursoBuilder.Novo().ComValor(valorInvalido).Build())
+                .ComMensagem("Valor inválido");
         }
     }
 
@@ -139,7 +147,7 @@ namespace CursoOnlineDDD.Dominio.Test.Cursos
 
     public class Curso
     {
-        public Curso(string nome, double cargaHoraria, PublicoAlvo publicoAlvo, double valor)
+        public Curso(string nome, string descricao, double cargaHoraria, PublicoAlvo publicoAlvo, double valor)
         {
             if (string.IsNullOrEmpty((nome)))
                 throw new ArgumentException("Nome inválido");
@@ -151,12 +159,14 @@ namespace CursoOnlineDDD.Dominio.Test.Cursos
                 throw new ArgumentException("Valor inválido");
 
             Nome = nome;
+            Descricao = descricao;
             CargaHoraria = cargaHoraria;
             PublicoAlvo = publicoAlvo;
             Valor = valor;
         }
 
         public string Nome { get; set; }
+        public string Descricao { get; set; }
         public double CargaHoraria { get; private set; }
         public PublicoAlvo PublicoAlvo { get; private set; }
         public double Valor { get; private set; }
