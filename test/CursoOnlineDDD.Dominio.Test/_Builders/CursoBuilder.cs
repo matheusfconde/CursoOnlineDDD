@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CursoOnlineDDD.Dominio.Test.Cursos;
+﻿using CursoOnlineTDD.Dominio.Cursos;
 
 namespace CursoOnlineDDD.Dominio.Test._Builders
 {

@@ -9,3 +9,4 @@ C:\_estudos\CursoOnlineTDD\src\CursoOnlineTDD.Dominio\obj\Debug\net6.0\CursoOnli
 C:\_estudos\CursoOnlineTDD\src\CursoOnlineTDD.Dominio\obj\Debug\net6.0\CursoOnlineTDD.Dominio.dll
 C:\_estudos\CursoOnlineTDD\src\CursoOnlineTDD.Dominio\obj\Debug\net6.0\ref\CursoOnlineTDD.Dominio.dll
 C:\_estudos\CursoOnlineTDD\src\CursoOnlineTDD.Dominio\obj\Debug\net6.0\CursoOnlineTDD.Dominio.pdb
+C:\_estudos\CursoOnlineTDD\src\CursoOnlineTDD.Dominio\obj\Debug\net6.0\CursoOnlineTDD.Dominio.csproj.AssemblyReference.cache

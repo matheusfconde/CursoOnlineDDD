@@ -1692,6 +1692,16 @@
         "build": {
           "build/netcoreapp2.1/xunit.runner.visualstudio.props": {}
         }
+      },
+      "CursoOnlineTDD.Dominio/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/CursoOnlineTDD.Dominio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CursoOnlineTDD.Dominio.dll": {}
+        }
       }
     }
   },
@@ -6016,11 +6026,17 @@
         "xunit.runner.visualstudio.2.4.3.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "CursoOnlineTDD.Dominio/1.0.0": {
+      "type": "project",
+      "path": "../../src/CursoOnlineTDD.Dominio/CursoOnlineTDD.Dominio.csproj",
+      "msbuildProject": "../../src/CursoOnlineTDD.Dominio/CursoOnlineTDD.Dominio.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Bogus >= 35.4.0",
+      "CursoOnlineTDD.Dominio >= 1.0.0",
       "ExpectedObjects >= 3.5.4",
       "Microsoft.NET.Test.Sdk >= 16.11.0",
       "coverlet.collector >= 3.1.0",
@@ -6058,7 +6074,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\_estudos\\CursoOnlineTDD\\src\\CursoOnlineTDD.Dominio\\CursoOnlineTDD.Dominio.csproj": {
+              "projectPath": "C:\\_estudos\\CursoOnlineTDD\\src\\CursoOnlineTDD.Dominio\\CursoOnlineTDD.Dominio.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
