@@ -2,6 +2,7 @@
 using Bogus;
 using CursoOnlineDDD.Dominio.Test._Builders;
 using CursoOnlineDDD.Dominio.Test._Util;
+using CursoOnlineTDD.Dominio.Cursos;
 using ExpectedObjects;
 using Xunit;
 using Xunit.Abstractions;
@@ -139,40 +140,5 @@ namespace CursoOnlineDDD.Dominio.Test.Cursos
                 CursoBuilder.Novo().ComValor(valorInvalido).Build())
                 .ComMensagem("Valor inválido");
         }
-    }
-
-    public enum PublicoAlvo
-    {
-        Estudante,
-        Universitario,
-        Empregado,
-        Empreendedor
-    }
-
-    public class Curso
-    {
-        public Curso(string nome, string descricao, double cargaHoraria, PublicoAlvo publicoAlvo, double valor)
-        {
-            if (string.IsNullOrEmpty((nome)))
-                throw new ArgumentException("Nome inválido");
-
-            if (cargaHoraria < 1)
-                throw new ArgumentException("Carga horária inválida");
-
-            if (valor < 1)
-                throw new ArgumentException("Valor inválido");
-
-            Nome = nome;
-            Descricao = descricao;
-            CargaHoraria = cargaHoraria;
-            PublicoAlvo = publicoAlvo;
-            Valor = valor;
-        }
-
-        public string Nome { get; set; }
-        public string Descricao { get; set; }
-        public double CargaHoraria { get; private set; }
-        public PublicoAlvo PublicoAlvo { get; private set; }
-        public double Valor { get; private set; }
     }
 }
