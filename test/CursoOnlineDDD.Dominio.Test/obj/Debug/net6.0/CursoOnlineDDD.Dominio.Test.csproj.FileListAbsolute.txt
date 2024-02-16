@@ -102,3 +102,8 @@ C:\_estudos\CursoOnlineTDD\test\CursoOnlineDDD.Dominio.Test\bin\Debug\net6.0\Bog
 C:\_estudos\CursoOnlineTDD\test\CursoOnlineDDD.Dominio.Test\bin\Debug\net6.0\CoverletSourceRootsMapping
 C:\_estudos\CursoOnlineTDD\test\CursoOnlineDDD.Dominio.Test\bin\Debug\net6.0\CursoOnlineTDD.Dominio.dll
 C:\_estudos\CursoOnlineTDD\test\CursoOnlineDDD.Dominio.Test\bin\Debug\net6.0\CursoOnlineTDD.Dominio.pdb
+C:\_estudos\CursoOnlineTDD\test\CursoOnlineDDD.Dominio.Test\bin\Debug\net6.0\Castle.Core.dll
+C:\_estudos\CursoOnlineTDD\test\CursoOnlineDDD.Dominio.Test\bin\Debug\net6.0\Moq.dll
+C:\_estudos\CursoOnlineTDD\test\CursoOnlineDDD.Dominio.Test\bin\Debug\net6.0\System.Diagnostics.EventLog.dll
+C:\_estudos\CursoOnlineTDD\test\CursoOnlineDDD.Dominio.Test\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll
+C:\_estudos\CursoOnlineTDD\test\CursoOnlineDDD.Dominio.Test\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll
