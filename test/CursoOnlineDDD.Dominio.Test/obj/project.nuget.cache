@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "hxkV9YLfTigJbpzf5X0d2vSM91cZ+SD3ze61zZUIncsxhg4P+D/qsCfDIrqRygjXRlD4+Hi4zza1/B0atDs23w==",
+  "dgSpecHash": "DBqSlTOMWrFneUg1l0l/B7ye14M/4Ye9/aK30NSCHcW9shfN3upy/O8+yCWSS7f9+rAzwwiZ7IQuzGQ+xtKxxw==",
   "success": true,
   "projectFilePath": "C:\\_estudos\\CursoOnlineTDD\\test\\CursoOnlineDDD.Dominio.Test\\CursoOnlineDDD.Dominio.Test.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\mathe\\.nuget\\packages\\bogus\\35.4.0\\bogus.35.4.0.nupkg.sha512",
     "C:\\Users\\mathe\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",
+    "C:\\Users\\mathe\\.nuget\\packages\\expectedobjects\\3.5.4\\expectedobjects.3.5.4.nupkg.sha512",
     "C:\\Users\\mathe\\.nuget\\packages\\microsoft.codecoverage\\16.11.0\\microsoft.codecoverage.16.11.0.nupkg.sha512",
     "C:\\Users\\mathe\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\mathe\\.nuget\\packages\\microsoft.net.test.sdk\\16.11.0\\microsoft.net.test.sdk.16.11.0.nupkg.sha512",

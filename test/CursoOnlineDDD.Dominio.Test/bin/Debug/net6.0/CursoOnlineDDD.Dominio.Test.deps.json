@@ -8,6 +8,9 @@
     ".NETCoreApp,Version=v6.0": {
       "CursoOnlineDDD.Dominio.Test/1.0.0": {
         "dependencies": {
+          "Bogus": "35.4.0",
+          "CursoOnlineTDD.Dominio": "1.0.0",
+          "ExpectedObjects": "3.5.4",
           "Microsoft.NET.Test.Sdk": "16.11.0",
           "coverlet.collector": "3.1.0",
           "xunit": "2.4.1",
@@ -17,7 +20,27 @@
           "CursoOnlineDDD.Dominio.Test.dll": {}
         }
       },
+      "Bogus/35.4.0": {
+        "runtime": {
+          "lib/net6.0/Bogus.dll": {
+            "assemblyVersion": "35.4.0.0",
+            "fileVersion": "35.4.0.0"
+          }
+        }
+      },
       "coverlet.collector/3.1.0": {},
+      "ExpectedObjects/3.5.4": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.Reflection.TypeExtensions": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/ExpectedObjects.dll": {
+            "assemblyVersion": "3.5.4.0",
+            "fileVersion": "3.5.4.0"
+          }
+        }
+      },
       "Microsoft.CodeCoverage/16.11.0": {
         "runtime": {
           "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {
@@ -1088,7 +1111,12 @@
           }
         }
       },
-      "xunit.runner.visualstudio/2.4.3": {}
+      "xunit.runner.visualstudio/2.4.3": {},
+      "CursoOnlineTDD.Dominio/1.0.0": {
+        "runtime": {
+          "CursoOnlineTDD.Dominio.dll": {}
+        }
+      }
     }
   },
   "libraries": {
@@ -1097,12 +1125,26 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Bogus/35.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XdUvztqAXJb3CI0+/fJrB4K7p8bOlnmhplibMCDpl4vHG/NRDjG9qionxYf9DKk7cbVfMTUfSkQ7hcxKBdO0Dg==",
+      "path": "bogus/35.4.0",
+      "hashPath": "bogus.35.4.0.nupkg.sha512"
+    },
     "coverlet.collector/3.1.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-YzYqSRrjoP5lULBhTDcTOjuM4IDPPi6PhFsl4w8EI4WdZhE6llt7E38Tg4CHyrS+QKwyu1+9OwkdDgluOdoBTw==",
       "path": "coverlet.collector/3.1.0",
       "hashPath": "coverlet.collector.3.1.0.nupkg.sha512"
+    },
+    "ExpectedObjects/3.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7urJ3ZpCWIegl2JfDbmyIR+E1Wu/4sG9oJPYVBxByBnbVavFcOHbWTlDeWMJQAYu8ZgrO0OG8UeiCnsWbxzYlA==",
+      "path": "expectedobjects/3.5.4",
+      "hashPath": "expectedobjects.3.5.4.nupkg.sha512"
     },
     "Microsoft.CodeCoverage/16.11.0": {
       "type": "package",
@@ -1740,6 +1782,11 @@
       "sha512": "sha512-kZZSmOmKA8OBlAJaquPXnJJLM9RwQ27H7BMVqfMLUcTi9xHinWGJiWksa3D4NEtz0wZ/nxd2mogObvBgJKCRhQ==",
       "path": "xunit.runner.visualstudio/2.4.3",
       "hashPath": "xunit.runner.visualstudio.2.4.3.nupkg.sha512"
+    },
+    "CursoOnlineTDD.Dominio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

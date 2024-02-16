@@ -1,0 +1,20 @@
+# Ignorar arquivos de compilação gerados
+bin/
+obj/
+
+# Ignorar arquivos de dependências
+*.dll
+*.exe
+*.pdb
+*.suo
+*.user
+*.vs/
+*.bak
+
+# Ignorar arquivos de configuração
+*.log
+*.config
+
+# Ignorar arquivos específicos do xUnit
+TestResults/
+.vscode/
